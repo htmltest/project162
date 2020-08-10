@@ -74,11 +74,57 @@ $(document).ready(function() {
     });
 
     $('.buy-link').click(function(e) {
-        $('.purchase-site-details a[data-shop="dns"]').attr('href', $(this).attr('data-dns'));
-        $('.purchase-site-details a[data-shop="aliexpress"]').attr('href', $(this).attr('data-aliexpress'));
-        $('.purchase-site-details a[data-shop="onlinetrade"]').attr('href', $(this).attr('data-onlinetrade'));
-        $('.purchase-site-details a[data-shop="mvideo"]').attr('href', $(this).attr('data-mvideo'));
+        var curLink = $(this);
+        if (typeof(curLink.attr('data-dns')) === 'undefined') {
+            $('.purchase-site-details a[data-shop="dns"]').hide();
+        } else {
+            $('.purchase-site-details a[data-shop="dns"]').show();
+            $('.purchase-site-details a[data-shop="dns"]').attr('href', curLink.attr('data-dns'));
+        }
+        if (typeof(curLink.attr('data-aliexpress')) === 'undefined') {
+            $('.purchase-site-details a[data-shop="aliexpress"]').hide();
+        } else {
+            $('.purchase-site-details a[data-shop="aliexpress"]').show();
+            $('.purchase-site-details a[data-shop="aliexpress"]').attr('href', curLink.attr('data-aliexpress'));
+        }
+        if (typeof(curLink.attr('data-onlinetrade')) === 'undefined') {
+            $('.purchase-site-details a[data-shop="onlinetrade"]').hide();
+        } else {
+            $('.purchase-site-details a[data-shop="onlinetrade"]').show();
+            $('.purchase-site-details a[data-shop="onlinetrade"]').attr('href', curLink.attr('data-onlinetrade'));
+        }
+        if (typeof(curLink.attr('data-mvideo')) === 'undefined') {
+            $('.purchase-site-details a[data-shop="mvideo"]').hide();
+        } else {
+            $('.purchase-site-details a[data-shop="mvideo"]').show();
+            $('.purchase-site-details a[data-shop="mvideo"]').attr('href', curLink.attr('data-mvideo'));
+        }
+        if (typeof(curLink.attr('data-wildberries')) === 'undefined') {
+            $('.purchase-site-details a[data-shop="wildberries"]').hide();
+        } else {
+            $('.purchase-site-details a[data-shop="wildberries"]').show();
+            $('.purchase-site-details a[data-shop="wildberries"]').attr('href', curLink.attr('data-wildberries'));
+        }
+        if (typeof(curLink.attr('data-svyaznoi')) === 'undefined') {
+            $('.purchase-site-details a[data-shop="svyaznoi"]').hide();
+        } else {
+            $('.purchase-site-details a[data-shop="svyaznoi"]').show();
+            $('.purchase-site-details a[data-shop="svyaznoi"]').attr('href', curLink.attr('data-svyaznoi'));
+        }
         $('html').addClass('purchase-visible');
+        e.preventDefault();
+    });
+
+    $('.social-site-close-icon').click(function() {
+        $('html').removeClass('social-visible');
+    });
+
+    $('.social-bg').click(function() {
+        $('html').removeClass('social-visible');
+    });
+
+    $('.contests-rules-btn a').click(function(e) {
+        $('html').addClass('social-visible');
         e.preventDefault();
     });
 

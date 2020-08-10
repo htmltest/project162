@@ -378,7 +378,7 @@ html {font-size:625%}
 .purchase-box .purchase-site-modal .purchase-site-option .purchase-site-details a:hover {border-color:rgba(0, 0, 0, 0.2)}
 .purchase-box .purchase-site-modal .purchase-site-option .purchase-site-details a img {width:1.6rem; height:1.6rem}
 @media (min-width:769px) {
-    .purchase-site-details {flex-wrap:wrap; width:386px}
+    .purchase-site-details {flex-wrap:wrap; width:540px; justify-content:center}
     .purchase-site-details a {margin-bottom:15px !important}
 }
 @media screen and (max-width:768px) {
@@ -390,6 +390,34 @@ html {font-size:625%}
     .purchase-box .purchase-site-modal .purchase-site-option .purchase-site-details a {width:2.8rem; line-height:0.6rem}
     .purchase-box .purchase-site-modal .purchase-site-option .purchase-site-details a img {width:0.88rem; height:auto; vertical-align:middle}
     .purchase-box .purchase-site-modal .purchase-site-option .purchase-site-details a {margin:0 0 0.1rem 0}
+}
+
+.social-visible body {overflow:hidden}
+.social-box {position:fixed; left:0; top:0; right:0; bottom:0; z-index:15; display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-align:center; -ms-flex-align:center; align-items:center; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column; overflow:auto; opacity:0; visibility:hidden; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center; -webkit-transition:opacity ease-in-out 0.3s; transition:opacity ease-in-out 0.3s}
+.social-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.3)}
+.social-visible .social-box {opacity:1; visibility:visible}
+.social-box .social-site-modal {background:#fff; position:relative}
+.social-box .social-site-modal .social-site-close-icon {position:absolute; top:0.24rem; right:0.24rem; cursor:pointer}
+.social-box .social-site-modal .social-site-message {-webkit-box-shadow:inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); box-shadow:inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); border-radius:4px 4px 0 0; text-align:center; color:#333; padding:0.4rem 0}
+.social-box .social-site-modal .social-site-message .message-buy-now {width:100%; font-size:0.2rem; margin-bottom:0.08rem; line-height:0.27rem}
+.social-box .social-site-modal .social-site-option {padding:0.32rem 1.32rem}
+.social-box .social-site-modal .social-site-option .social-site-details {display:-webkit-box; display:-ms-flexbox; display:flex}
+.social-box .social-site-modal .social-site-option .social-site-details a {text-align:center; border:1px solid rgba(0, 0, 0, 0.1); border-radius:4px; margin:0 0.08rem; overflow:hidden}
+.social-box .social-site-modal .social-site-option .social-site-details a:hover {border-color:rgba(0, 0, 0, 0.2)}
+.social-box .social-site-modal .social-site-option .social-site-details a img {width:1.6rem; height:1.6rem}
+@media (min-width:769px) {
+    .social-site-details {flex-wrap:wrap; width:540px; justify-content:center}
+    .social-site-details a {margin-bottom:15px !important}
+}
+@media screen and (max-width:768px) {
+    .social-box .social-site-modal .social-site-close-icon {top:0.1rem; right:0.1rem}
+    .social-box .social-site-modal .social-site-message .message-buy-now {font-size:0.16rem; margin-bottom:0.05rem; line-height:0.22rem}
+    .social-box .social-site-modal .social-site-option {padding:0.2rem; -ms-flex-wrap:wrap; flex-wrap:wrap}
+    .social-box .social-site-modal .social-site-option .social-site-details {-webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column}
+    .social-box .social-site-modal .social-site-option .social-site-details picture {display:block; height:0.75rem}
+    .social-box .social-site-modal .social-site-option .social-site-details a {width:2.8rem; line-height:0.6rem}
+    .social-box .social-site-modal .social-site-option .social-site-details a img {width:0.88rem; height:auto; vertical-align:middle}
+    .social-box .social-site-modal .social-site-option .social-site-details a {margin:0 0 0.1rem 0}
 }
 
 .slick-prev,
