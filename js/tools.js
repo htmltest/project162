@@ -11,21 +11,8 @@ $(document).ready(function() {
         autoplaySpeed: 5000,
         pauseOnFocus: false,
         pauseOnHover: false,
-        pauseOnDotsHover: false
-    });
-
-    $('.slider-mobile-list').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev"><svg width="19px" height="32px" viewBox="0 0 19 32" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-1595.000000, -296.000000)" stroke="#FFFFFF" stroke-width="2"><g transform="translate(308.000000, 297.000000)"><g transform="translate(1288.000000, 0.000000)"><polyline transform="translate(8.000000, 15.000000) scale(-1, 1) translate(-8.000000, -15.000000) " points="16 0 0 15 16 30"></polyline></g></g></g></g></svg></button>',
-        nextArrow: '<button type="button" class="slick-next"><svg width="19px" height="32px" viewBox="0 0 19 32" xmlns="http://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-1595.000000, -296.000000)" stroke="#FFFFFF" stroke-width="2"><g transform="translate(308.000000, 297.000000)"><g transform="translate(1288.000000, 0.000000)"><polyline transform="translate(8.000000, 15.000000) scale(-1, 1) translate(-8.000000, -15.000000) " points="16 0 0 15 16 30"></polyline></g></g></g></g></svg></button>',
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnFocus: false,
-        pauseOnHover: false,
-        pauseOnDotsHover: false
+        pauseOnDotsHover: false,
+        adaptiveHeight: true
     });
 
     $('.menu-item').click(function(e) {
@@ -127,5 +114,27 @@ $(document).ready(function() {
         $('html').addClass('social-visible');
         e.preventDefault();
     });
+
+    $('.up-link').click(function(e) {
+        $('html, body').animate({'scrollTop': 0});
+        e.preventDefault();
+    });
+
+});
+
+$(window).on('load resize scroll', function() {
+    var windowScroll = $(window).scrollTop();
+
+    $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
+    var windowHeight = $('#body-test-height').height();
+    $('#body-test-height').remove();
+
+    if ($('.up-link').length == 1) {
+        if (windowScroll > windowHeight) {
+            $('.up-link').addClass('visible');
+        } else {
+            $('.up-link').removeClass('visible');
+        }
+    }
 
 });

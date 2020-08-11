@@ -26,15 +26,19 @@ a {color:#ffc916}
 .btn-yellow {display:inline-block; vertical-align:top; text-decoration:none; color:#141101; background:#f0c735}
 .btn-yellow:hover {opacity:0.8}
 
-.slider {position:absolute; left:0; top:0; right:0}
+.slider {position:relative}
 .slider-list {position:relative; width:100%; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; overflow:hidden}
-.slider-item {display:inline-block; vertical-align:top; width:100%; height:650px; background:no-repeat center; background-size:cover}
+.slider-item {display:inline-block; vertical-align:top; width:100%; height:650px; position:relative}
+.slider-item-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center; background-size:cover}
+.slider-item-bg-mobile {display:none}
 
 @media screen and (max-width:1235px) {
-    .slider {display:none}
+    .slider-item {height:auto}
+    .slider-item-bg-mobile {display:block; position:relative; height:344px; margin:26px -10px 0 -10px; background:no-repeat center; background-size:cover}
+    .slider-item-bg {display:none}
 }
 
-.welcome {position:relative; pointer-events:none}
+.welcome {position:relative}
 .welcome-container {width:403px; height:650px; text-align:center; background:url(../images/welcome-bg.jpg) no-repeat; padding:54px 0 0 0; color:#020608}
 .welcome-title {width:325px; height:44px; background:url(../images/welcome-title.png) no-repeat; margin:0 auto}
 .welcome-date {font-size:22px; line-height:22px; font-weight:800; margin:-3px 0 0 0}
@@ -44,8 +48,6 @@ a {color:#ffc916}
 .welcome-logo {width:326px; height:98px; margin:14px auto 0 auto; position:relative}
 .welcome-logo::before {content:""; display:block; width:326px; height:183px; position:absolute; left:0; bottom:0; background:url(../images/welcome-logo.png) no-repeat}
 .welcome-standarts {font-weight:600; font-size:20px; line-height:20px; color:#181818; letter-spacing:11px; margin:6px 0 0 0}
-.welcome-notice {font-weight:300; font-size:9px; line-height:15px; padding:24px 0 0 0}
-.welcome-notice p {margin:0; padding:0}
 
 @media screen and (max-width:1235px) {
     .welcome {background:url(../images/welcome-bg-mobile.jpg) no-repeat center top; background-size:100% auto; pointer-events:auto}
@@ -58,19 +60,13 @@ a {color:#ffc916}
     .welcome-logo {width:245px; height:74px; margin:8px auto 0 auto}
     .welcome-logo::before {width:245px; height:139px; background:url(../images/welcome-logo-mobile.png) no-repeat}
     .welcome-standarts {font-size:15px; line-height:15px; letter-spacing:8.6px; margin:5px 0 0 0}
-    .welcome-notice {margin:0 -10px; background:url(../images/welcome-notice-mobile.png) center; background-size:cover; line-height:11px; padding:15px 10px}
-    .welcome-notice br {display:none}
-}
-
-.slider-mobile {display:none}
-
-@media screen and (max-width:1235px) {
-    .slider-mobile {display:block; margin:27px -10px 0 -10px}
-    .slider-mobile-list {position:relative; width:100%; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; overflow:hidden}
-    .slider-mobile-item {display:inline-block; vertical-align:top; width:100%; height:344px; background:no-repeat center; background-size:cover}
 }
 
 .logo {position:absolute; left:39px; top:39px; width:127px; height:39px; background:#f6c833 url(../images/logo.svg) no-repeat center; background-size:103px 25px}
+
+@media screen and (max-width:1480px) {
+    .logo {top:10px}
+}
 
 @media screen and (max-width:1235px) {
     .logo {left:24px; top:24px; width:79px; height:25px; background-size:64px 16px}
@@ -234,6 +230,7 @@ a {color:#ffc916}
 .accessories-item-logo {line-height:0}
 .accessories-item-title {font-size:25px; line-height:27px; padding:19px 0 0 0}
 .accessories-item-price {padding:49px 0 0 0}
+.accessories-item:nth-child(2) .accessories-item-price {padding:22px 0 0 0}
 .accessories-item-price strong {font-weight:600; font-size:38px; line-height:38px; color:#f1c835}
 .accessories-item-price span {font-size:21px; line-height:21px; color:#bfbfbf; text-decoration:line-through}
 .accessories-item-btn {padding:2px 0 0 0}
@@ -249,6 +246,7 @@ a {color:#ffc916}
     .accessories-item-content {right:10px; top:60px; width:250px}
     .accessories-item-title {font-size:21px; line-height:26px; padding:14px 0 0 0}
     .accessories-item-price {padding:22px 0 0 0}
+    .accessories-item:nth-child(2) .accessories-item-price {padding:10px 0 0 0}
     .accessories-item-price strong {font-size:30px; line-height:30px}
     .accessories-item-price span {font-size:17px; line-height:17px}
     .accessories-item-btn .btn-yellow {font-size:23px; line-height:37px; height:37px; padding:0 43px}
@@ -267,7 +265,6 @@ a {color:#ffc916}
 .contests-rules {margin:81px 0 0 0; background:#87dba2 url(../images/contests-rules.jpg) no-repeat; min-height:553px}
 .contests-rules::after {content:""; display:block; clear:both}
 .contests-rules-content {float:right; width:463px; margin:0 40px 0 0; padding:41px 0 0 0}
-.contests-rules-logo {width:244px; height:40px; background:url(../images/contests-rules-logo.svg) no-repeat; background-size:100%; margin:0 0 0 13px}
 .contests-rules-title {font-weight:600; font-size:38px; line-height:38px; color:#000; padding:29px 0 0 0}
 .contests-rules-text {font-weight:500; font-size:25px; line-height:33px; color:#000; padding:20px 0 0 0}
 .contests-rules-text ul {margin:0; padding:0; list-style:none}
@@ -279,7 +276,6 @@ a {color:#ffc916}
 @media screen and (max-width:1235px) {
     .contests-rules {margin:38px 0 0 0; background:#87dba2 url(../images/contests-rules-mobile.jpg) no-repeat; min-height:0; padding:380px 28px 34px 28px}
     .contests-rules-content {float:none; width:auto; margin:0; padding:0}
-    .contests-rules-logo {display:none}
     .contests-rules-title {font-size:33px; line-height:33px; padding:0}
     .contests-rules-text {font-size:21px; line-height:23px}
     .contests-rules-text ul li {padding:0 0 0 12px}
@@ -434,3 +430,26 @@ html {font-size:625%}
 .slick-dots li:first-child {margin:0}
 .slick-dots li button {display:block; position:relative; width:8px; height:8px; border-radius:50%; border:none; background:rgba(74, 74, 74, 0.3); margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
 .slick-dots li.slick-active button {background:#4a4a4a}
+
+@media screen and (max-width:1235px) {
+    .slider .slick-prev,
+    .slider .slick-next {top:auto; bottom:172px; margin:0 0 -34px 0}
+}
+
+.up-link {display:block; opacity:0; visibility:hidden; position:fixed; z-index:90; right:40px; bottom:40px; transition:opacity 0.2s; width:40px; height:40px; background:rgba(255, 255, 255, 0.2)}
+.up-link:hover {background:rgba(255, 255, 255, 0.4)}
+.up-link.visible {opacity:1; visibility:visible}
+.up-link svg {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%) rotate(-90deg)}
+
+@media screen and (max-width:1235px) {
+    .up-link {right:20px; bottom:20px}
+}
+
+.remarks {background:#fff; color:#758089; padding:40px 0}
+.remarks-title {font-size:25px; line-height:29px; font-weight:500}
+.remarks-text {font-size:17px; line-height:29px; padding:15px 0 0 0}
+.remarks-text p {margin:0; padding:0}
+
+@media screen and (max-width:1235px) {
+    .remarks {padding:24px 0 44px 0}
+}
