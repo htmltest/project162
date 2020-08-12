@@ -121,6 +121,7 @@ a {color:#ffc916}
 .smartphones-main-text {padding:13px 0 0 0}
 .smartphones-main-price {padding:53px 0 0 0}
 .smartphones-main-price strong {font-weight:600; font-size:42px; line-height:42px; color:#f1c835}
+.smartphones-main-price em {font-style:normal; font-size:50%}
 .smartphones-main-price span {font-size:22px; line-height:22px; color:#bfbfbf; text-decoration:line-through}
 .smartphones-main-btn {padding:7px 0 0 0}
 .smartphones-main-btn .btn-yellow {font-size:29px; line-height:47px; font-weight:600; height:47px; padding:0 37px}
@@ -162,7 +163,8 @@ a {color:#ffc916}
 .smartphones-item-variant {float:left; margin:0 0 0 80px}
 .smartphones-item-variant:first-child {margin:0}
 .smartphones-item-price strong {font-weight:600; font-size:33px; line-height:33px; color:#f1c835}
-.smartphones-item-price span {font-size:20px; line-height:20px; color:#bfbfbf; text-decoration:line-through}
+.smartphones-item-price em {font-style:normal; font-size:50%}
+.smartphones-item-price span {font-size:20px; line-height:20px; color:#bfbfbf; text-decoration:line-through; position:absolute; top:13px; white-space:nowrap}
 .smartphones-item-btn .btn-yellow {font-size:26px; line-height:42px; font-weight:600; height:42px; padding:0 25px; color:#0a0900}
 
 @media screen and (max-width:1235px) {
@@ -174,7 +176,7 @@ a {color:#ffc916}
     .smartphones-item-variant {margin:0 0 0 35px}
     .smartphones-item-variant:first-child {margin:0}
     .smartphones-item-price strong {font-size:30px; line-height:30px}
-    .smartphones-item-price span {font-size:18px; line-height:18px}
+    .smartphones-item-price span {font-size:18px; line-height:18px; top:10px}
     .smartphones-item-btn .btn-yellow {font-size:24px; line-height:38px; height:38px; padding:0 20px}
 }
 
@@ -218,6 +220,7 @@ a {color:#ffc916}
 .accessories-main-text {padding:17px 0 0 0; font-size:21px; line-height:33px}
 .accessories-main-price {padding:53px 0 0 0}
 .accessories-main-price strong {font-weight:600; font-size:42px; line-height:42px; color:#f1c835}
+.accessories-main-price em {font-style:normal; font-size:50%}
 .accessories-main-price span {font-size:22px; line-height:22px; color:#bfbfbf; text-decoration:line-through}
 .accessories-main-btn {padding:7px 0 0 0}
 .accessories-main-btn .btn-yellow {font-size:29px; line-height:47px; font-weight:600; height:47px; padding:0 68px}
@@ -247,6 +250,7 @@ a {color:#ffc916}
 .accessories-item-price {padding:49px 0 0 0}
 .accessories-item:nth-child(2) .accessories-item-price {padding:22px 0 0 0}
 .accessories-item-price strong {font-weight:600; font-size:38px; line-height:38px; color:#f1c835}
+.accessories-item-price em {font-style:normal; font-size:50%}
 .accessories-item-price span {font-size:21px; line-height:21px; color:#bfbfbf; text-decoration:line-through}
 .accessories-item-btn {padding:2px 0 0 0}
 .accessories-item-btn .btn-yellow {font-size:28px; line-height:46px; font-weight:600; height:46px; padding:0 58px}
@@ -310,7 +314,7 @@ a {color:#ffc916}
     .contests-shops {margin:10px -2px 0 -2px}
     .contests-shop {padding:4px 2px 0 2px}
     .contests-shop-inner {height:222px; border-width:1px; border-radius:2px; text-align:center; padding:19px 0 0 0}
-    .contests-shop:nth-child(3) .contests-shop-inner {padding:11px 0 0 0}
+    .contests-shop:nth-child(3) .contests-shop-inner {padding:19px 0 0 0}
     .contests-shop-logo {position:relative; left:auto; top:auto; transform:none; height:75px; line-height:75px}
     .contests-shop-logo img {width:auto; vertical-align:middle}
     .contests-shop:nth-child(1) .contests-shop-logo img {height:75px}
@@ -318,8 +322,7 @@ a {color:#ffc916}
     .contests-shop:nth-child(3) .contests-shop-logo img {height:75px}
     .contests-shop:nth-child(4) .contests-shop-logo img {height:60px}
     .contests-shop-text {position:relative; left:auto; width:auto; bottom:auto; font-size:21px; line-height:21px; padding:8px 0 0 0}
-    .contests-shop:nth-child(4) .contests-shop-text {padding:14px 0 7px 0}
-    .contests-shop-btn {position:relative; left:auto; top:auto; margin:12px 0 0 0}
+    .contests-shop-btn {position:absolute; left:0; top:auto; bottom:15px; margin:0; right:0}
     .contests-shop-btn .btn-red {padding:0 15px; height:34px; line-height:34px; font-size:17px}
 }
 
