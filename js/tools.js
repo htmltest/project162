@@ -62,6 +62,7 @@ $(document).ready(function() {
 
     $('.buy-link').click(function(e) {
         var curLink = $(this);
+        $('.purchase-site-details').attr('data-product', curLink.attr('data-model'));
         if (typeof(curLink.attr('data-dns')) === 'undefined') {
             $('.purchase-site-details a[data-shop="dns"]').hide();
         } else {
